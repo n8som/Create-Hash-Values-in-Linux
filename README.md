@@ -38,7 +38,8 @@ Two files, file1.txt and file2.txt, are listed.
 
 4. Review the output of the two file contents:
 
-[]
+![image](https://github.com/n8som/Create-Hash-Values-in-Linux/assets/110139109/424398d7-9343-4e56-87ed-5ba2b538649e)
+
 The contents of the two files appear identical when using this command.
 
 Although the contents of both files appear identical when I use the ```cat``` command, I need to generate the hash for each file to determine if the files are actually different.
@@ -55,7 +56,8 @@ I now need to follow the same step for the file2.txt file.
 
 Review the generated hashes of the contents of the two files:
 
-[]
+![image](https://github.com/n8som/Create-Hash-Values-in-Linux/assets/110139109/08bce119-2a04-4393-87aa-d46a3559fcaf)
+
 They don’t produce the same generated hash value.
 
 <h2>Task 2. Compare hashes</h2>
@@ -80,6 +82,8 @@ I can manually display and compare the differences.
 
 4. Inspect the output and note the difference in the hash values.
 
+![image](https://github.com/n8som/Create-Hash-Values-in-Linux/assets/110139109/f0a262a1-bfe6-420c-bdbf-1b1dbdf93a8e)
+
 Note: Although the content in file1.txt and file2.txt previously appeared identical, the hashes written to the file1hash and file2hash files are completely different.
 
 Now, I can use the ```cmp``` command to compare the two files byte by byte. If a difference is found, the command reports the byte and line number where the first difference is found.
@@ -90,7 +94,10 @@ Now, I can use the ```cmp``` command to compare the two files byte by byte. If a
 
 6. Review the output, which reports the first difference between the two files:
 
-[]
+![image](https://github.com/n8som/Create-Hash-Values-in-Linux/assets/110139109/d1a4115c-81b1-4880-a484-7d08fd1ef433)
+
+Note: The output of the ```cmp``` command indicates that the hashes differ at the first character in the first line.
+
 Based on the hash values, file1.txt is different from file2.txt
 
 <h2>Conclusion</h2>
